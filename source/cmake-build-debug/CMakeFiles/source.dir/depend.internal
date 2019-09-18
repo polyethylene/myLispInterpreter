@@ -3,3 +3,8 @@
 
 CMakeFiles/source.dir/main.c.obj
  C:/polyethylene/Github/myLispInterpreter/source/main.c
+ C:/polyethylene/Github/myLispInterpreter/source/mpc.h
+ C:/polyethylene/Github/myLispInterpreter/source/value_type.h
+CMakeFiles/source.dir/mpc.c.obj
+ C:/polyethylene/Github/myLispInterpreter/source/mpc.c
+ C:/polyethylene/Github/myLispInterpreter/source/mpc.h

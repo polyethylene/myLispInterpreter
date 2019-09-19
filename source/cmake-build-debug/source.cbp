@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/eval.c">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/eval.h">
+			<Option target="source"/>
+		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/headers.h">
 			<Option target="source"/>
 		</Unit>

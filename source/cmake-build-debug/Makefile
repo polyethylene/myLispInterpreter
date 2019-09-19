@@ -122,6 +122,33 @@ source/fast:
 	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/build
 .PHONY : source/fast
 
+eval.obj: eval.c.obj
+
+.PHONY : eval.obj
+
+# target to build an object file
+eval.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/eval.c.obj
+.PHONY : eval.c.obj
+
+eval.i: eval.c.i
+
+.PHONY : eval.i
+
+# target to preprocess a source file
+eval.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/eval.c.i
+.PHONY : eval.c.i
+
+eval.s: eval.c.s
+
+.PHONY : eval.s
+
+# target to generate assembly for a file
+eval.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/eval.c.s
+.PHONY : eval.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -239,6 +266,9 @@ help:
 	@echo ... edit_cache
 	@echo ... source
 	@echo ... rebuild_cache
+	@echo ... eval.obj
+	@echo ... eval.i
+	@echo ... eval.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

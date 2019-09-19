@@ -39,17 +39,19 @@ struct lval {
 
     /* function */
     builtin_fun *builtin;
-    lenv *par;
-    char **args;
+    lenv *env;
+    lval *args;
     lval *body;
 };
 
 /* definition of environment, will be changed into hash_table */
 
 struct lenv {
+    lenv *par;
+
     int count;
-    char **sym;
-    lval **val;
+    char **syms;
+    lval **vals;
 };
 
 /* definition of lisp value data structure */
@@ -72,7 +74,7 @@ lval *lval_num(int);
 
 lval *lval_sym(char *);
 
-lval *lval_err(char *);
+lval *lval_err(char *, ...);
 
 lval *lval_str(char *);
 
@@ -83,6 +85,7 @@ lval *lval_qexpr();
 lval *lval_fun();
 
 lenv *lenv_new();
+
 
 /* operation of lisp value */
 
@@ -97,6 +100,15 @@ lval *lval_pop(lval *, int);
 lval *lval_take(lval *, int);
 
 lval *lval_join(lval *, lval *);
+
+
+/* operation of enviroment */
+
+lval *lenv_get(lenv *, lval *);
+
+void lenv_del(lenv *);
+
+void lenv_put(lenv *, lval *, lval *);
 
 /* operation of link list */
 
@@ -117,5 +129,9 @@ void link_list_push_back(lval_link_list *, lval *);
 void link_list_pop_back(lval_link_list *, lval *);
 
 lval *link_list_get(lval_link_list *, int);
+
+
+/* addition function */
+char *ltype_name(int);
 
 #endif

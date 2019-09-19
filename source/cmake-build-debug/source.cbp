@@ -76,6 +76,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/headers.h">
+			<Option target="source"/>
+		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/main.c">
 			<Option target="source"/>
 		</Unit>
@@ -83,6 +86,15 @@
 			<Option target="source"/>
 		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/mpc.h">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/read.c">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/read.h">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/value_type.c">
 			<Option target="source"/>
 		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/value_type.h">

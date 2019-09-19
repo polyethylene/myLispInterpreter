@@ -176,6 +176,60 @@ mpc.c.s:
 	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/mpc.c.s
 .PHONY : mpc.c.s
 
+read.obj: read.c.obj
+
+.PHONY : read.obj
+
+# target to build an object file
+read.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/read.c.obj
+.PHONY : read.c.obj
+
+read.i: read.c.i
+
+.PHONY : read.i
+
+# target to preprocess a source file
+read.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/read.c.i
+.PHONY : read.c.i
+
+read.s: read.c.s
+
+.PHONY : read.s
+
+# target to generate assembly for a file
+read.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/read.c.s
+.PHONY : read.c.s
+
+value_type.obj: value_type.c.obj
+
+.PHONY : value_type.obj
+
+# target to build an object file
+value_type.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/value_type.c.obj
+.PHONY : value_type.c.obj
+
+value_type.i: value_type.c.i
+
+.PHONY : value_type.i
+
+# target to preprocess a source file
+value_type.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/value_type.c.i
+.PHONY : value_type.c.i
+
+value_type.s: value_type.c.s
+
+.PHONY : value_type.s
+
+# target to generate assembly for a file
+value_type.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/value_type.c.s
+.PHONY : value_type.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -191,6 +245,12 @@ help:
 	@echo ... mpc.obj
 	@echo ... mpc.i
 	@echo ... mpc.s
+	@echo ... read.obj
+	@echo ... read.i
+	@echo ... read.s
+	@echo ... value_type.obj
+	@echo ... value_type.i
+	@echo ... value_type.s
 .PHONY : help
 
 

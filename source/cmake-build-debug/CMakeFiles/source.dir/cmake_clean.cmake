@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/source.dir/main.c.obj"
   "CMakeFiles/source.dir/mpc.c.obj"
+  "CMakeFiles/source.dir/read.c.obj"
+  "CMakeFiles/source.dir/value_type.c.obj"
   "source.pdb"
   "source.exe"
   "source.exe.manifest"

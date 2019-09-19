@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/polyethylene/Github/myLispInterpreter/source/main.c
-stdio.h
--
-stdlib.h
--
-mpc.h
-C:/polyethylene/Github/myLispInterpreter/source/mpc.h
-value_type.h
-C:/polyethylene/Github/myLispInterpreter/source/value_type.h
-string.h
--
-editline/readline.h
--
-editline/history.h
--
-
 C:/polyethylene/Github/myLispInterpreter/source/mpc.h
 stdlib.h
 -
@@ -37,6 +21,20 @@ errno.h
 -
 ctype.h
 -
+
+C:/polyethylene/Github/myLispInterpreter/source/read.c
+mpc.h
+C:/polyethylene/Github/myLispInterpreter/source/mpc.h
+value_type.h
+C:/polyethylene/Github/myLispInterpreter/source/value_type.h
+read.h
+C:/polyethylene/Github/myLispInterpreter/source/read.h
+string.h
+-
+
+C:/polyethylene/Github/myLispInterpreter/source/read.h
+mpc.h
+C:/polyethylene/Github/myLispInterpreter/source/mpc.h
 
 C:/polyethylene/Github/myLispInterpreter/source/value_type.h
 

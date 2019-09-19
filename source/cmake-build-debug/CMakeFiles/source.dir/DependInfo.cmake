@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/polyethylene/Github/myLispInterpreter/source/main.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/mpc.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/mpc.c.obj"
+  "C:/polyethylene/Github/myLispInterpreter/source/read.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj"
+  "C:/polyethylene/Github/myLispInterpreter/source/value_type.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

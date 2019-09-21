@@ -87,6 +87,13 @@ void lval_print_single(lval *v) {
             printf("'");
             lval_print_single(v->tar); // just print a "'" before its target
             break;
+        case LTYPE_FUN:
+            if (v->builtin) {
+                printf("<builtin>");
+            } else {
+                printf("<function>");
+            }
+            break;
         default:
             break;
     }

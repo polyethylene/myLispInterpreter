@@ -3,8 +3,6 @@
 //
 #include "headers.h"
 
-#define v a
-
 lval *lval_eval(lenv *env, lval *v) {
     if (v->type == LTYPE_SYM) {
         lval *r = lenv_get(env, v);
@@ -47,13 +45,14 @@ lval *lval_eval_sexpr(lenv *env, lval *v) {
         lval_del(v);
         return err;
     }
-    lval *result = lval_call(env,f,v);
+    /* f is always a function type and v is a sexpression that hold all argutments */
+    lval *result = lval_call(env, f, v);
     return result;
 }
 
-lval* lval_call(lenv* env,lval* fun,lval* v){
-    if(fun->builtin){
-        return fun->builtin(env,v);
+lval *lval_call(lenv *env, lval *fun, lval *v) {
+    if (fun->builtin) {
+        return fun->builtin(env, v);
     }
 
     int get = v->count;
@@ -75,7 +74,7 @@ lval* lval_call(lenv* env,lval* fun,lval* v){
             }
             /* Next formal should be bound to remaining arguments */
             lval *nsym = lval_pop(fun->args, 0);
-            lenv_put(fun->env, nsym, builtin_list(env, v));
+            //lenv_put(fun->env, nsym, builtin_list(env, v));
             lval_del(sym);
             lval_del(nsym);
             break;

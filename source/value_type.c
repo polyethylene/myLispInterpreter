@@ -1,7 +1,5 @@
 #include "headers.h"
 
-#define env e
-
 lval *lval_num(int n) {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_NUM;
@@ -53,6 +51,15 @@ lval *lval_qexpr() {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_QEXPR;
     r->tar = NULL;
+    return r;
+}
+
+lval *lval_fun(builtin_fun fun) {
+    lval *r = malloc(sizeof(lval));
+    r->type = LTYPE_FUN;
+    r->builtin = fun;
+    r->args = NULL;
+    r->body = NULL;
     return r;
 }
 
@@ -115,6 +122,16 @@ lval *lval_copy(lval *a) {
         case LTYPE_QEXPR:
             r->tar = lval_copy(a->tar);
             break;
+        case LTYPE_FUN:
+            if (a->builtin) {
+                r->builtin = a->builtin;
+            } else {
+                r->builtin = NULL;
+                r->env = lenv_copy(a->env);
+                r->args = lval_copy(a->args);
+                r->body = lval_copy(a->body);
+            }
+            break;
         default:
             lval_del(r);
             break;
@@ -129,7 +146,22 @@ lval *lval_add(lval *d, lval *v) {
     return d;
 }
 
+lval *lval_pop(lval *v, int i) {
+    lval *r = v->elem[i];
+    memmove(&v->elem[i], &v->elem[i + 1], sizeof(lval *) * (v->count - i - 1));
+    v->count--;
+    v->elem = realloc(v->elem, sizeof(lval *) * v->count);
+    return r;
+}
+
+lval *lval_take(lval *v, int i) {
+    lval *r = lval_pop(v, i);
+    lval_del(v);
+    return r;
+}
+
 /* return the name of type (for error format print) */
+
 char *ltype_name(int type) {
     switch (type) {
         case LTYPE_NUM:
@@ -152,7 +184,39 @@ char *ltype_name(int type) {
 }
 
 
+lenv *lenv_new() {
+    lenv *r = malloc(sizeof(lenv));
+    r->count = 0;
+    r->syms = NULL;
+    r->vals = NULL;
+    r->par = NULL;
+}
+
+lval *lenv_get(lenv *env, lval *v) {
+    for (int i = 0; i < env->count; i++) {
+        if (strcmp(v->sym, env->syms[i]) == 0) {
+            return lval_copy(env->vals[i]);
+        }
+    }
+    return lval_err("Unbound symbol %s", v->sym);
+}
+
+lenv *lenv_copy(lenv *e) {
+    lenv *r = lenv_new();
+    r->count = e->count;
+    r->vals = malloc(sizeof(lval *) * e->count);
+    for (int i = 0; i < e->count; i++) {
+        r->vals[i] = lval_copy(e->vals[i]);
+
+        /* string space is not constant, so it should be allocate singly */
+        r->syms[i] = malloc(strlen(e->syms[i]) + 1);
+        strcpy(r->syms[i], e->syms[i]);
+    }
+    return r;
+}
+
 /* put new pairs into environment */
+
 void lenv_put(lenv *env, lval *s, lval *v) {
     for (int i = 0; i < env->count; i++) {
         /* if there is one same symbol in the environment, redefine it */

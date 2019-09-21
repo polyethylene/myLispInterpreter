@@ -122,6 +122,33 @@ source/fast:
 	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/build
 .PHONY : source/fast
 
+builtin.obj: builtin.c.obj
+
+.PHONY : builtin.obj
+
+# target to build an object file
+builtin.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/builtin.c.obj
+.PHONY : builtin.c.obj
+
+builtin.i: builtin.c.i
+
+.PHONY : builtin.i
+
+# target to preprocess a source file
+builtin.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/builtin.c.i
+.PHONY : builtin.c.i
+
+builtin.s: builtin.c.s
+
+.PHONY : builtin.s
+
+# target to generate assembly for a file
+builtin.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/builtin.c.s
+.PHONY : builtin.c.s
+
 eval.obj: eval.c.obj
 
 .PHONY : eval.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... edit_cache
 	@echo ... source
 	@echo ... rebuild_cache
+	@echo ... builtin.obj
+	@echo ... builtin.i
+	@echo ... builtin.s
 	@echo ... eval.obj
 	@echo ... eval.i
 	@echo ... eval.s

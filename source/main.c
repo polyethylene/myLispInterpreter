@@ -1,5 +1,23 @@
 #include "headers.h"
 
+#ifndef _WIN_32
+static char buffer[2048];
+
+char *readline(char *prompt) {
+    fputs(prompt, stdout);
+    fgets(buffer, 2048, stdin);
+    char *cpy = malloc(strlen(buffer) + 1);
+    strcpy(cpy, buffer);
+    cpy[strlen(cpy) - 1] = '\0';
+    return cpy;
+}
+
+void add_history(char *unused) {}
+
+#else
+#include <editline/readline.h>
+#include <editline/history.h>
+#endif
 /* definition and initialization of parser type */
 
 mpc_parser_t *Number;
@@ -39,6 +57,8 @@ int main() {
               Number, Symbol, String, SExpr, QExpr, Expr, Lisp);
 
     mpc_result_t r;
+    lenv *env = lenv_new();
+    lenv_add_builtins(env);
 
     while (1) {
         char *input = readline("LISP> ");
@@ -52,6 +72,9 @@ int main() {
             lval **cur = NULL;
             int num = 0;
             cur = lval_read(r.output, &num);
+            for(int i = 0;i<num;i++){
+                cur[i] = lval_eval(env,cur[i]);
+            }
             lval_print(num, cur);
 
             mpc_ast_delete(r.output);

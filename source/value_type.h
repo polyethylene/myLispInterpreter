@@ -82,7 +82,7 @@ lval *lval_sexpr();
 
 lval *lval_qexpr();
 
-lval *lval_fun();
+lval *lval_fun(builtin_fun);
 
 lenv *lenv_new();
 
@@ -109,6 +109,8 @@ lval *lenv_get(lenv *, lval *);
 void lenv_del(lenv *);
 
 void lenv_put(lenv *, lval *, lval *);
+
+lenv *lenv_copy(lenv *);
 
 /* operation of link list */
 

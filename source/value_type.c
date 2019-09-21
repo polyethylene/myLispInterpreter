@@ -63,6 +63,16 @@ lval *lval_fun(builtin_fun fun) {
     return r;
 }
 
+lval *lval_lambda(lval *args, lval *body) {
+    lval *r = malloc(sizeof(lval));
+    r->type = LTYPE_FUN;
+    r->builtin = NULL;
+    r->env = lenv_new();
+    r->args = lval_copy(args);
+    r->body = lval_copy(body);
+    return r;
+}
+
 void lval_del(lval *a) {
     if (!a) {
         return;
@@ -198,7 +208,11 @@ lval *lenv_get(lenv *env, lval *v) {
             return lval_copy(env->vals[i]);
         }
     }
-    return lval_err("Unbound symbol %s", v->sym);
+    if (env->par) {
+        lenv_get(env->par, v);
+    } else {
+        return lval_err("Unbound symbol %s", v->sym);
+    }
 }
 
 lenv *lenv_copy(lenv *e) {

@@ -59,46 +59,69 @@ lval *builtin_list(lenv *env, lval *v) {
 lval *builtin_head(lenv *env, lval *v) {
     LASSERT_NUM("head", v, 1);
     LASSERT_TYPE("head", v, 0, LTYPE_QEXPR);
-    lval *r = lval_take(v->elem[0]->tar, 0);
+    lval *a = lval_take(v, 0);
+    lval *r = lval_copy(a->tar);
+    lval_del(a);
     return r;
 }
 
 lval *builtin_tail(lenv *env, lval *v) {
     LASSERT_NUM("tail", v, 1);
     LASSERT_TYPE("tail", v, 0, LTYPE_QEXPR);
-    lval *p = lval_pop(v->elem[0]->tar, 0);
-    lval_del(p);
-    return v->elem[0];
+    lval *a = lval_take(v, 0);
+    lval *r = lval_copy(a->tar);
+    lval_del(a);
+    lval *d = lval_pop(r, 0);
+    lval_del(d);
+    return r;
 }
 
 lval *builtin_lambda(lenv *env, lval *v) {
     LASSERT_NUM("lambda", v, 2);
-    LASSERT_TYPE("lambda", v, 0, LTYPE_SEXPR);
+    LASSERT_TYPE("lambda", v, 0, LTYPE_QEXPR);
+    LASSERT_TYPE("lambda", v, 1, LTYPE_QEXPR);
+
 
     for (int i = 0; i < v->elem[0]->count; i++) {
         LASSERT(v, (v->elem[0]->elem[i]->type == LTYPE_SYM),
                 "Function lambda : cannot define non-symbol. Got %s, Expected %s.",
                 ltype_name(v->elem[0]->elem[i]->type), ltype_name(LTYPE_SYM));
     }
-
-    lval *f = lval_fun(NULL);
-    f->env = lenv_new();
-    f->env->par = env;
-    f->args = lval_copy(v->elem[0]);
-    f->body = lval_copy(v->elem[1]);
-    return f;
+    lval *args = lval_pop(v, 0);
+    lval *body = lval_pop(v, 0);
+    lval_del(v);
+    lval *l = lval_lambda(args, body);
+    lval_del(args);
+    lval_del(body);
+    return l;
 }
 
 lval *builtin_def(lenv *env, lval *v) {
     LASSERT_NUM("define", v, 2);
-    if (v->elem[0]->type == LTYPE_SYM) {
-        lenv_put(env, v->elem[0], v->elem[1]);
-    }
-    if (v->elem[0]->type == LTYPE_SEXPR) {
-
-    }
+    LASSERT_TYPE("define", v, 0, LTYPE_QEXPR);
+    LASSERT_TYPE("define", v, 1, LTYPE_QEXPR);
+    return builtin_def_fun(env, v);
 }
 
+lval *builtin_def_fun(lenv *env, lval *v) {
+    /* get the function name */
+    lval *name = lval_pop(v->elem[0]->tar, 0);
+
+    /* create an lambda variable */
+    lval *f = builtin_lambda(env, v);
+
+    /* link the name and the variable in the current environment (local variable) */
+    lenv_put(env, name, f);
+    return lval_sexpr();
+}
+
+lval *builtin_eval(lenv *env, lval *v) {
+    LASSERT_NUM("eval", v, 1)
+    LASSERT_TYPE("eval", v, 0, LTYPE_QEXPR);
+    lval *q = lval_take(v, 0);
+    lval *r = lval_copy(q->tar);
+    return lval_eval(env, r);
+}
 
 void lenv_add_builtin(lenv *env, char *a, builtin_fun *b) {
     lval *s = lval_sym(a);
@@ -117,4 +140,8 @@ void lenv_add_builtins(lenv *e) {
     lenv_add_builtin(e, "list", builtin_list);
     lenv_add_builtin(e, "head", builtin_head);
     lenv_add_builtin(e, "tail", builtin_tail);
+
+    lenv_add_builtin(e, "eval", builtin_eval);
+    lenv_add_builtin(e, "define", builtin_def);
+    lenv_add_builtin(e, "lambda", builtin_lambda);
 }

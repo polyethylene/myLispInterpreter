@@ -84,6 +84,8 @@ lval *lval_qexpr();
 
 lval *lval_fun(builtin_fun);
 
+lval *lval_lambda(lval*,lval*);
+
 lenv *lenv_new();
 
 

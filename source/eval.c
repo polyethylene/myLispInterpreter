@@ -56,32 +56,24 @@ lval *lval_call(lenv *env, lval *fun, lval *v) {
     }
 
     int get = v->count;
-    int total = fun->args->count;
+    int total = fun->args->tar->count;
     while (v->count) {
-        if (fun->args->count == 0) {
+        if (fun->args->tar->count == 0) {
             lval_del(v);
             return lval_err("Function get too many arguments. Got %i, expected %i", get, total);
         }
-        lval *sym = lval_pop(fun->args, 0);
+        lval *sym = lval_pop(fun->args->tar, 0);
         lval *act = lval_pop(v, 0);
-
-        if (strcmp(sym->sym, "&") == 0) {
-            /* Ensure '&' is followed by another symbol */
-            if (fun->args->count != 1) {
-                lval_del(v);
-                return lval_err("Function format invalid. "
-                                "Symbol '&' not followed by single symbol.");
-            }
-            /* Next formal should be bound to remaining arguments */
-            lval *nsym = lval_pop(fun->args, 0);
-            //lenv_put(fun->env, nsym, builtin_list(env, v));
-            lval_del(sym);
-            lval_del(nsym);
-            break;
-        }
         lenv_put(fun->env, sym, act);
         lval_del(sym);
         lval_del(act);
+    }
+
+    if (fun->args->tar->count == 0) {
+        fun->env->par = env;
+        return builtin_eval(fun->env, lval_add(lval_sexpr(), lval_copy(fun->body)));
+    } else {
+        return lval_copy(fun);
     }
 }
 

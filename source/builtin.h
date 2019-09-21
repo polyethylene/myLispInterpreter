@@ -25,9 +25,15 @@ lval *builtin_tail(lenv *, lval *);
 
 /* builtin lambda operation */
 
-lval* builtin_lambda(lenv*, lval*);
+lval *builtin_lambda(lenv *, lval *);
 
-lval* builtin_def(lenv* ,lval*);
+lval *builtin_def(lenv *, lval *);
+
+lval *builtin_def_fun(lenv *, lval *);
+
+lval *builtin_def_sym(lenv *, lval *);
+
+lval *builtin_eval(lenv *, lval *);
 
 void lenv_add_builtin(lenv *, char *, builtin_fun *);
 

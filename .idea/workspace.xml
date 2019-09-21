@@ -12,31 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ba6321e-218d-4fd4-a14a-0218f56fb3db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/builtin.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/builtin.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/builtin.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/builtin.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/builtin.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/builtin.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/eval.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/eval.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/source.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/source.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/eval.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/eval.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/headers.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/headers.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/read.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/read.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/value_type.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/value_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.h" afterDir="false" />
     </list>
@@ -53,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/value_type.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2080">
-              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -62,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/value_type.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2980">
-              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            <state relative-caret-position="293">
+              <caret line="211" column="30" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -71,26 +56,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/eval.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/builtin.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/builtin.h">
+        <entry file="file://$PROJECT_DIR$/source/builtin.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="113">
+              <caret line="78" column="20" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -113,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="75" column="38" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="38" />
+            <state relative-caret-position="432">
+              <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -125,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/read.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+            <state relative-caret-position="551">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -145,17 +121,20 @@
       <find>lval_err</find>
       <find>formals</find>
       <find>e</find>
-      <find>lenv_new</find>
       <find>cell</find>
       <find>lval_get</find>
       <find>print</find>
       <find>lenv</find>
-      <find>lenv_get</find>
       <find>lval</find>
       <find>lenv_put</find>
       <find>lval_fun</find>
       <find>env</find>
       <find>lenv_copy</find>
+      <find>lenv_new</find>
+      <find>builtin_eval</find>
+      <find>builtin_lambda</find>
+      <find>`</find>
+      <find>lenv_get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,20 +151,21 @@
         <option value="$PROJECT_DIR$/source/eval.h" />
         <option value="$PROJECT_DIR$/source/headers.h" />
         <option value="$PROJECT_DIR$/source/read.c" />
-        <option value="$PROJECT_DIR$/source/value_type.h" />
-        <option value="$PROJECT_DIR$/source/value_type.c" />
         <option value="$PROJECT_DIR$/source/main.c" />
-        <option value="$PROJECT_DIR$/source/eval.c" />
+        <option value="$PROJECT_DIR$/source/value_type.h" />
         <option value="$PROJECT_DIR$/source/builtin.h" />
         <option value="$PROJECT_DIR$/source/builtin.c" />
+        <option value="$PROJECT_DIR$/source/eval.c" />
+        <option value="$PROJECT_DIR$/source/value_type.c" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="409" />
+    <option name="x" value="1100" />
+    <option name="y" value="538" />
     <option name="width" value="1522" />
-    <option name="height" value="1051" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -257,28 +237,29 @@
       <workItem from="1568908546300" duration="4301000" />
       <workItem from="1568937843428" duration="5629000" />
       <workItem from="1568945198576" duration="8595000" />
+      <workItem from="1569049339489" duration="5883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34829000" />
+    <option name="totallyTimeSpent" value="40712000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11940298" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1209622" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.3275488" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.32321042" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.32304037" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32968238" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49946696" weight="0.28633407" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.2483731" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49946696" weight="0.2862233" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.4049881" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -352,24 +333,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.c">
+    <entry file="file://$PROJECT_DIR$/source/builtin.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2980">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2080">
-          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/eval.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
+        <state relative-caret-position="612">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -387,34 +354,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="75" column="38" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/read.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        <state relative-caret-position="551">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/builtin.h">
+    <entry file="file://$PROJECT_DIR$/source/value_type.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="340">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/builtin.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/value_type.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="211" column="30" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/eval.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
         </state>
       </provider>
     </entry>

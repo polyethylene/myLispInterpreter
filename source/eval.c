@@ -1,6 +1,3 @@
-//
-// Created by 聚乙烯 on 2019/9/19.
-//
 #include "headers.h"
 
 lval *lval_eval(lenv *env, lval *v) {
@@ -23,7 +20,7 @@ lval *lval_eval_sexpr(lenv *env, lval *v) {
 
     /* check whether there is an error, if there is one, take it */
     for (int i = 0; i < v->count; i++) {
-        if (v->type == LTYPE_ERR) {
+        if (v->elem[i]->type == LTYPE_ERR) {
             return lval_take(v, i);
         }
     }

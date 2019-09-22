@@ -91,7 +91,17 @@ void lval_print_single(lval *v) {
             if (v->builtin) {
                 printf("<builtin>");
             } else {
-                printf("<function>");
+                printf("<function> args:");
+                lval_print_single(v->args->tar);
+                printf(" body:");
+                lval_print_single(v->body->tar);
+            }
+            break;
+        case LTYPE_BOOL:
+            if (v->bval == LBOOL_TRUE) {
+                printf("#True");
+            } else {
+                printf("#False");
             }
             break;
         default:

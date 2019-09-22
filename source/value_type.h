@@ -1,11 +1,20 @@
 #ifndef SOURCE_VALUE_TYPE_H
 #define SOURCE_VALUE_TYPE_H
 
+typedef enum lbool lbool;
+typedef enum ltype ltype;
+
+/* lisp bool value */
+enum lbool {
+    LBOOL_TRUE, LBOOL_FALSE
+};
+
+
 /* tag of lisp value type */
 
-enum {
+enum ltype {
     LTYPE_NUM, LTYPE_SYM, LTYPE_ERR, LTYPE_STR,
-    LTYPE_SEXPR, LTYPE_QEXPR, LTYPE_FUN
+    LTYPE_SEXPR, LTYPE_QEXPR, LTYPE_FUN, LTYPE_BOOL
 };
 
 /* declaration of lisp value type and lisp environment*/
@@ -24,11 +33,12 @@ typedef lval *builtin_fun(lenv *, lval *);
 
 struct lval {
     /* basic type */
-    int type;           //type of the value
+    ltype type;           //type of the value
     int num;            //for number
     char *sym;          //for symbol
     char *err;          //for error
     char *str;          //for string
+    lbool bval;           //for bool
 
     /* q expression */
     lval *tar;
@@ -78,13 +88,15 @@ lval *lval_err(char *, ...);
 
 lval *lval_str(char *);
 
+lval *lval_bool(lbool);
+
 lval *lval_sexpr();
 
 lval *lval_qexpr();
 
 lval *lval_fun(builtin_fun);
 
-lval *lval_lambda(lval*,lval*);
+lval *lval_lambda(lval *, lval *);
 
 lenv *lenv_new();
 
@@ -136,6 +148,6 @@ lval *link_list_get(lval_link_list *, int);
 
 
 /* addition function */
-char *ltype_name(int);
+char *ltype_name(ltype);
 
 #endif

@@ -33,6 +33,15 @@ lval *builtin_def_fun(lenv *, lval *);
 
 lval *builtin_def_sym(lenv *, lval *);
 
+/* builtin compare operation */
+
+lval *builtin_gt(lenv *, lval *);
+
+lval *builtin_lt(lenv *, lval *);
+
+lval *builtin_cmp(lval *, char *);
+
+
 lval *builtin_eval(lenv *, lval *);
 
 void lenv_add_builtin(lenv *, char *, builtin_fun *);

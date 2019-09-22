@@ -1,6 +1,5 @@
 #include "builtin.h"
 
-
 lval *builtin_add(lenv *env, lval *a) {
     return builtin_op(a, "+");
 }
@@ -18,6 +17,9 @@ lval *builtin_div(lenv *env, lval *a) {
 }
 
 lval *builtin_op(lval *a, char *op) {
+    if ((strcmp(op, "*") == 0 || strcmp(op, "/") == 0) && a->count < 2) {
+        return lval_err("Operator '%s' got too less arguments. Got %i, Expected more than 1.", op, a->count);
+    }
     for (int i = 0; i < a->count; i++) {
         LASSERT_TYPE(op, a, i, LTYPE_NUM);
     }
@@ -81,12 +83,12 @@ lval *builtin_lambda(lenv *env, lval *v) {
     LASSERT_TYPE("lambda", v, 0, LTYPE_QEXPR);
     LASSERT_TYPE("lambda", v, 1, LTYPE_QEXPR);
 
-
-    for (int i = 0; i < v->elem[0]->count; i++) {
-        LASSERT(v, (v->elem[0]->elem[i]->type == LTYPE_SYM),
-                "Function lambda : cannot define non-symbol. Got %s, Expected %s.",
-                ltype_name(v->elem[0]->elem[i]->type), ltype_name(LTYPE_SYM));
+    for (int i = 0; i < v->elem[0]->tar->count; i++) {
+        LASSERT(v, (v->elem[0]->tar->elem[i]->type == LTYPE_SYM),
+                "Function lambda : argruments can't be non-symbol. Got %s, Expected %s.",
+                ltype_name(v->elem[0]->tar->elem[i]->type), ltype_name(LTYPE_SYM));
     }
+
     lval *args = lval_pop(v, 0);
     lval *body = lval_pop(v, 0);
     lval_del(v);
@@ -100,6 +102,11 @@ lval *builtin_def(lenv *env, lval *v) {
     LASSERT_NUM("define", v, 2);
     LASSERT_TYPE("define", v, 0, LTYPE_QEXPR);
     LASSERT_TYPE("define", v, 1, LTYPE_QEXPR);
+
+    LASSERT(v, (v->elem[0]->tar->elem[0]->type == LTYPE_SYM),
+            "Function lambda : cannot define non-symbol. Got %s, Expected %s.",
+            ltype_name(v->elem[0]->tar->elem[0]->type), ltype_name(LTYPE_SYM));
+
     return builtin_def_fun(env, v);
 }
 
@@ -109,6 +116,10 @@ lval *builtin_def_fun(lenv *env, lval *v) {
 
     /* create an lambda variable */
     lval *f = builtin_lambda(env, v);
+    /* catch the non-symbol-error */
+    if (f->type == LTYPE_ERR) {
+        return f;
+    }
 
     /* link the name and the variable in the current environment (local variable) */
     lenv_put(env, name, f);
@@ -121,6 +132,34 @@ lval *builtin_eval(lenv *env, lval *v) {
     lval *q = lval_take(v, 0);
     lval *r = lval_copy(q->tar);
     return lval_eval(env, r);
+}
+
+lval *builtin_gt(lenv *env, lval *v) {
+    return builtin_cmp(v, ">");
+}
+
+lval *builtin_lt(lenv *env, lval *v) {
+    return builtin_cmp(v, "<");
+}
+
+lval *builtin_cmp(lval *v, char *op) {
+    LASSERT_NUM(op, v, 2);
+    LASSERT_TYPE(op, v, 0, LTYPE_NUM);
+    LASSERT_TYPE(op, v, 1, LTYPE_NUM);
+    lval *lhs = lval_pop(v, 0);
+    lval *rhs = lval_take(v, 0);
+    int l = lhs->num, r = rhs->num, result = 0;
+    lval_del(lhs);
+    lval_del(rhs);
+    if (strcmp(op, ">") == 0) { result = l > r; }
+    else if (strcmp(op, ">=") == 0) { result = l >= r; }
+    else if (strcmp(op, "<") == 0) { result = l < r; }
+    else if (strcmp(op, "<=") == 0) { result = l <= r; }
+    if (result) {
+        return lval_bool(LBOOL_TRUE);
+    } else {
+        return lval_bool(LBOOL_FALSE);
+    }
 }
 
 void lenv_add_builtin(lenv *env, char *a, builtin_fun *b) {
@@ -144,4 +183,7 @@ void lenv_add_builtins(lenv *e) {
     lenv_add_builtin(e, "eval", builtin_eval);
     lenv_add_builtin(e, "define", builtin_def);
     lenv_add_builtin(e, "lambda", builtin_lambda);
+
+    lenv_add_builtin(e, ">", builtin_gt);
+    lenv_add_builtin(e, "<", builtin_lt);
 }

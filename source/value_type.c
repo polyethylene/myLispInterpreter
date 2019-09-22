@@ -39,6 +39,13 @@ lval *lval_str(char *s) {
     return r;
 }
 
+lval *lval_bool(lbool v) {
+    lval *r = malloc(sizeof(lval));
+    r->type = LTYPE_BOOL;
+    lbool bval = v;
+    return r;
+}
+
 lval *lval_sexpr() {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_SEXPR;
@@ -172,7 +179,7 @@ lval *lval_take(lval *v, int i) {
 
 /* return the name of type (for error format print) */
 
-char *ltype_name(int type) {
+char *ltype_name(ltype type) {
     switch (type) {
         case LTYPE_NUM:
             return "Number";
@@ -219,6 +226,7 @@ lenv *lenv_copy(lenv *e) {
     lenv *r = lenv_new();
     r->count = e->count;
     r->vals = malloc(sizeof(lval *) * e->count);
+    r->syms = malloc(sizeof(char *) * e->count);
     for (int i = 0; i < e->count; i++) {
         r->vals[i] = lval_copy(e->vals[i]);
 

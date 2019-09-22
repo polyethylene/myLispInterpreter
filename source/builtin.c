@@ -100,17 +100,37 @@ lval *builtin_lambda(lenv *env, lval *v) {
 
 lval *builtin_def(lenv *env, lval *v) {
     LASSERT_NUM("define", v, 2);
-    LASSERT_TYPE("define", v, 0, LTYPE_QEXPR);
-    LASSERT_TYPE("define", v, 1, LTYPE_QEXPR);
 
-    LASSERT(v, (v->elem[0]->tar->elem[0]->type == LTYPE_SYM),
-            "Function lambda : cannot define non-symbol. Got %s, Expected %s.",
-            ltype_name(v->elem[0]->tar->elem[0]->type), ltype_name(LTYPE_SYM));
+    if (v->elem[0]->tar->type == LTYPE_SYM) {
+        return builtin_def_sym(env, v);
+    } else {
+        return builtin_def_fun(env, v);
+    }
+}
 
-    return builtin_def_fun(env, v);
+lval *builtin_def_sym(lenv *env, lval *v) {
+    LASSERT_TYPE("define(symbol)", v, 0, LTYPE_QEXPR);
+    lval *t = lval_pop(v, 0);
+    lval *name = t->tar;
+    lval_del(t);
+
+    LASSERT(name, (name->type == LTYPE_SYM),
+            "Function define : cannot define non-symbol. Got %s, Expected %s.",
+            ltype_name(name->type), ltype_name(LTYPE_SYM));
+
+    lval *val = lval_take(v, 0);
+    lenv_put(env, name, val);
+    return lval_sexpr();
 }
 
 lval *builtin_def_fun(lenv *env, lval *v) {
+    LASSERT_TYPE("define(function)", v, 0, LTYPE_QEXPR);
+    LASSERT_TYPE("define(function)", v, 1, LTYPE_QEXPR);
+
+    LASSERT(v, (v->elem[0]->tar->elem[0]->type == LTYPE_SYM),
+            "Function define : cannot define non-symbol. Got %s, Expected %s.",
+            ltype_name(v->elem[0]->tar->elem[0]->type), ltype_name(LTYPE_SYM));
+
     /* get the function name */
     lval *name = lval_pop(v->elem[0]->tar, 0);
 
@@ -126,6 +146,7 @@ lval *builtin_def_fun(lenv *env, lval *v) {
     return lval_sexpr();
 }
 
+
 lval *builtin_eval(lenv *env, lval *v) {
     LASSERT_NUM("eval", v, 1)
     LASSERT_TYPE("eval", v, 0, LTYPE_QEXPR);
@@ -140,6 +161,14 @@ lval *builtin_gt(lenv *env, lval *v) {
 
 lval *builtin_lt(lenv *env, lval *v) {
     return builtin_cmp(v, "<");
+}
+
+lval *builtin_egt(lenv *env, lval *v) {
+    return builtin_cmp(v, ">=");
+}
+
+lval *builtin_elt(lenv *env, lval *v) {
+    return builtin_cmp(v, "<=");
 }
 
 lval *builtin_cmp(lval *v, char *op) {
@@ -160,6 +189,52 @@ lval *builtin_cmp(lval *v, char *op) {
     } else {
         return lval_bool(LBOOL_FALSE);
     }
+}
+
+lval *builtin_if(lenv *env, lval *v) {
+    LASSERT_NUM("if", v, 3);
+    LASSERT_TYPE("if", v, 0, LTYPE_BOOL);
+    LASSERT_TYPE("if", v, 1, LTYPE_QEXPR);
+    LASSERT_TYPE("if", v, 1, LTYPE_QEXPR);
+    lval *cond = lval_pop(v, 0);
+    if (cond->bval == LBOOL_TRUE) {
+        lval_del(cond);
+        return builtin_eval(env, lval_add(lval_sexpr(), lval_take(v, 0)));
+    } else {
+        lval_del(cond);
+        return builtin_eval(env, lval_add(lval_sexpr(), lval_take(v, 1)));
+    }
+}
+
+lval *builtin_load(lenv *env, lval *v) {
+    mpc_result_t t;
+
+    /* read all files */
+    for (int i = 0; i < v->count; i++) {
+        LASSERT_TYPE("load", v, i, LTYPE_STR);
+        if (mpc_parse_contents(v->elem[i]->str, Lisp, &t)) {
+            /*just like the main function */
+            lval **cur = NULL;
+            int num = 0;
+            cur = lval_read(t.output, &num);
+            mpc_ast_delete(t.output);
+            for (int i = 0; i < num; i++) {
+                lval_eval(env, cur[i]);
+            }
+        } else {
+            char *err_msg = mpc_err_string(t.error);
+            mpc_err_delete(t.error);
+
+            /* Create new error message using it */
+            lval *err = lval_err("Could not load Library %s", err_msg);
+            free(err_msg);
+            lval_del(v);
+
+            /* Cleanup and return error */
+            return err;
+        }
+    }
+    return lval_sexpr();
 }
 
 void lenv_add_builtin(lenv *env, char *a, builtin_fun *b) {
@@ -186,4 +261,10 @@ void lenv_add_builtins(lenv *e) {
 
     lenv_add_builtin(e, ">", builtin_gt);
     lenv_add_builtin(e, "<", builtin_lt);
+    lenv_add_builtin(e, ">=", builtin_egt);
+    lenv_add_builtin(e, "<=", builtin_elt);
+
+    lenv_add_builtin(e, "if", builtin_if);
+
+    lenv_add_builtin(e, "load", builtin_load);
 }

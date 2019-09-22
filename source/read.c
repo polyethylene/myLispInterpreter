@@ -13,8 +13,19 @@ lval *lval_read_number(mpc_ast_t *v) {
     }
 }
 
-lval *lval_read_string(mpc_ast_t *v) {
-    return lval_str(v->contents);
+lval *lval_read_string(mpc_ast_t *t) {
+    /* Cut off the final quote character */
+    t->contents[strlen(t->contents) - 1] = '\0';
+    /* Copy the string missing out the first quote character */
+    char *unescaped = malloc(strlen(t->contents + 1) + 1);
+    strcpy(unescaped, t->contents + 1);
+    /* Pass through the unescape function */
+    unescaped = mpcf_unescape(unescaped);
+    /* Construct a new lval using the string */
+    lval *str = lval_str(unescaped);
+    /* Free the string and return */
+    free(unescaped);
+    return str;
 }
 
 lval *lval_read_single(mpc_ast_t *v) {
@@ -52,7 +63,6 @@ lval **lval_read(mpc_ast_t *v, int *num_p) {
                 r[i - 1] = lval_read_single(v->children[i]);
             }
         }
-        printf("\n");
         *num_p = v->children_num - 2;
     } else {
         r = malloc(sizeof(lval *));
@@ -62,6 +72,18 @@ lval **lval_read(mpc_ast_t *v, int *num_p) {
     return r;
 }
 
+void lval_print_str(lval *v) {
+    /* Make a Copy of the string */
+    char *escaped = malloc(strlen(v->str) + 1);
+    strcpy(escaped, v->str);
+    /* Pass it through the escape function */
+    escaped = mpcf_escape(escaped);
+    /* Print it between " characters */
+    printf("\"%s\"", escaped);
+    /* free the copied string */
+    free(escaped);
+}
+
 void lval_print_single(lval *v) {
     switch (v->type) {
         case LTYPE_NUM:
@@ -69,6 +91,9 @@ void lval_print_single(lval *v) {
             break;
         case LTYPE_SYM:
             printf("%s", v->sym);
+            break;
+        case LTYPE_STR:
+            lval_print_str(v);
             break;
         case LTYPE_ERR:
             printf("Error: %s", v->err);

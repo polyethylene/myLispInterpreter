@@ -34,15 +34,15 @@ lval *lval_err(char *fmt, ...) {
 lval *lval_str(char *s) {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_STR;
-    r->sym = malloc(strlen(s) + 1);
-    strcpy(r->sym, s);
+    r->str = malloc(strlen(s) + 1);
+    strcpy(r->str, s);
     return r;
 }
 
 lval *lval_bool(lbool v) {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_BOOL;
-    lbool bval = v;
+    r->bval = v;
     return r;
 }
 
@@ -118,15 +118,15 @@ lval *lval_copy(lval *a) {
             r->num = a->num;
             break;
         case LTYPE_SYM:
-            r->sym = malloc(sizeof(strlen(a->sym) + 1));
+            r->sym = malloc(strlen(a->sym) + 1);
             strcpy(r->sym, a->sym);
             break;
         case LTYPE_ERR:
-            r->err = malloc(sizeof(strlen(a->err) + 1));
+            r->err = malloc(strlen(a->err) + 1);
             strcpy(r->err, a->err);
             break;
         case LTYPE_STR:
-            r->str = malloc(sizeof(strlen(a->str) + 1));
+            r->str = malloc(strlen(a->str) + 1);
             strcpy(r->str, a->str);
             break;
         case LTYPE_SEXPR:

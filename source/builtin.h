@@ -39,8 +39,19 @@ lval *builtin_gt(lenv *, lval *);
 
 lval *builtin_lt(lenv *, lval *);
 
+lval *builtin_egt(lenv *, lval *);
+
+lval *builtin_elt(lenv *, lval *);
+
 lval *builtin_cmp(lval *, char *);
 
+/* builtin conditional operation */
+
+lval *builtin_if(lenv *, lval *);
+
+/* builtin file read operation */
+
+lval *builtin_load(lenv *, lval *);
 
 lval *builtin_eval(lenv *, lval *);
 

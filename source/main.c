@@ -18,15 +18,15 @@ void add_history(char *unused) {}
 #include <editline/readline.h>
 #include <editline/history.h>
 #endif
-/* definition and initialization of parser type */
+/* initialization of parser type */
 
-mpc_parser_t *Number;
-mpc_parser_t *Symbol;
-mpc_parser_t *String;
-mpc_parser_t *SExpr;
-mpc_parser_t *QExpr;
-mpc_parser_t *Expr;
-mpc_parser_t *Lisp;
+char *grammar_string = "number : /-?[0-9]+/ ;"
+                       "symbol :/[a-zA-Z0-9_+\\-*\\/\\\\=<>!&]+/;"
+                       "string  : /\"(\\\\.|[^\"])*\"/ ;"
+                       "sexpr  : '(' <expr>* ')' ;"
+                       "qexpr  : ''' <expr> ;"
+                       "expr   : <number> | <symbol> | <sexpr> | <qexpr> | <string> ;"
+                       "lisp  : /^/ <expr>* /$/ ;";
 
 void parser_initialize() {
     Number = mpc_new("number");
@@ -46,14 +46,7 @@ int main() {
 
     /* define lisp grammar */
 
-    mpca_lang(MPCA_LANG_DEFAULT,
-              "number : /-?[0-9]+/ ;"
-              "symbol :/[a-zA-Z0-9_+\\-*\\/\\\\=<>!&]+/;"
-              "string  : /\"(\\\\.|[^\"])*\"/ ;"
-              "sexpr  : '(' <expr>* ')' ;"
-              "qexpr  : ''' <expr> ;"
-              "expr   : <number> | <symbol> | <sexpr> | <qexpr> | <string> ;"
-              "lisp  : /^/ <expr>* /$/ ;",
+    mpca_lang(MPCA_LANG_DEFAULT, grammar_string,
               Number, Symbol, String, SExpr, QExpr, Expr, Lisp);
 
     mpc_result_t r;
@@ -72,8 +65,8 @@ int main() {
             lval **cur = NULL;
             int num = 0;
             cur = lval_read(r.output, &num);
-            for(int i = 0;i<num;i++){
-                cur[i] = lval_eval(env,cur[i]);
+            for (int i = 0; i < num; i++) {
+                cur[i] = lval_eval(env, cur[i]);
             }
             lval_print(num, cur);
 

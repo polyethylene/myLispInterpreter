@@ -16,6 +16,14 @@
 
 #endif
 
+mpc_parser_t *Number;
+mpc_parser_t *Symbol;
+mpc_parser_t *String;
+mpc_parser_t *SExpr;
+mpc_parser_t *QExpr;
+mpc_parser_t *Expr;
+mpc_parser_t *Lisp;
+
 #define LASSERT(args, cond, fmt, ...) \
   if (!(cond)) { lval* err = lval_err(fmt, ##__VA_ARGS__); lval_del(args); return err; }
 

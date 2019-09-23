@@ -62,7 +62,7 @@ lval *builtin_head(lenv *env, lval *v) {
     LASSERT_NUM("head", v, 1);
     LASSERT_TYPE("head", v, 0, LTYPE_QEXPR);
     lval *a = lval_take(v, 0);
-    lval *r = lval_copy(a->tar);
+    lval *r = lval_pop(a->tar, 0);
     lval_del(a);
     return r;
 }
@@ -184,11 +184,112 @@ lval *builtin_cmp(lval *v, char *op) {
     else if (strcmp(op, ">=") == 0) { result = l >= r; }
     else if (strcmp(op, "<") == 0) { result = l < r; }
     else if (strcmp(op, "<=") == 0) { result = l <= r; }
-    if (result) {
-        return lval_bool(LBOOL_TRUE);
-    } else {
-        return lval_bool(LBOOL_FALSE);
+    return lval_bool(result);
+}
+
+int test_eq(lval *lhs, lval *rhs) {
+    if (lhs->type != rhs->type) {
+        return 0;
     }
+    switch (lhs->type) {
+        case LTYPE_NUM:
+            return lhs->num == rhs->num;
+        case LTYPE_SYM:
+            return strcmp(lhs->sym, rhs->sym) == 0;
+        case LTYPE_STR:
+            return strcmp(lhs->sym, rhs->sym) == 0;
+        case LTYPE_BOOL:
+            return lhs->bval == rhs->bval;
+        case LTYPE_FUN:
+            if (lhs->builtin) {
+                return lhs->builtin == rhs->builtin;
+            }
+            if (rhs->builtin) {
+                return 0;
+            }
+            return test_eq(lhs->args, rhs->args) &&
+                   test_eq(lhs->body, rhs->body);
+        case LTYPE_SEXPR:
+            if (lhs->count != rhs->count) {
+                return 0;
+            }
+            for (int i = 0; i < lhs->count; i++) {
+                if (!test_eq(lhs->elem[i], rhs->elem[i])) {
+                    return 0;
+                }
+            }
+            return 1;
+        case LTYPE_QEXPR:
+            return test_eq(lhs->tar, rhs->tar);
+        case LTYPE_ERR:
+            return strcmp(lhs->err, rhs->err) == 0;
+        default:
+            break;
+    }
+    return 0;
+}
+
+lval *builtin_eq(lenv *env, lval *v) {
+    LASSERT_NUM("==", v, 2);
+    lval *lhs = lval_pop(v, 0);
+    lval *rhs = lval_take(v, 0);
+    int res = test_eq(lhs, rhs);
+    lval_del(lhs);
+    lval_del(rhs);
+    return lval_bool(res);
+}
+
+lval *builtin_neq(lenv *env, lval *v) {
+    LASSERT_NUM("==", v, 2);
+    lval *lhs = lval_pop(v, 0);
+    lval *rhs = lval_take(v, 0);
+    int res = test_eq(lhs, rhs);
+    lval_del(lhs);
+    lval_del(rhs);
+    return lval_bool(!res);
+}
+
+lval *builtin_and(lenv *env, lval *v) {
+    for (int i = 0; i < v->count; i++) {
+        LASSERT_TYPE("and", v, i, LTYPE_BOOL);
+    }
+    lval *r = lval_bool(1);
+    for (int i = 0; i < v->count; i++) {
+        if (v->elem[i]->bval == LBOOL_FALSE) {
+            r->bval = LBOOL_FALSE;
+            break;
+        }
+    }
+    lval_del(v);
+    return r;
+}
+
+lval *builtin_or(lenv *env, lval *v) {
+    for (int i = 0; i < v->count; i++) {
+        LASSERT_TYPE("or", v, i, LTYPE_BOOL);
+    }
+    lval *r = lval_bool(0);
+    for (int i = 0; i < v->count; i++) {
+        if (v->elem[i]->bval == LBOOL_TRUE) {
+            r->bval = LBOOL_TRUE;
+            break;
+        }
+    }
+    lval_del(v);
+    return r;
+}
+
+lval *builtin_not(lenv *env, lval *v) {
+    LASSERT_NUM("not", v, 1);
+    LASSERT_TYPE("not", v, 0, LTYPE_BOOL);
+    lval *r = lval_bool(1);
+    if (v->elem[0]->bval == LBOOL_TRUE) {
+        r->bval = LBOOL_FALSE;
+    } else {
+        r->bval = LBOOL_TRUE;
+    }
+    lval_del(v);
+    return r;
 }
 
 lval *builtin_if(lenv *env, lval *v) {
@@ -263,8 +364,18 @@ void lenv_add_builtins(lenv *e) {
     lenv_add_builtin(e, "<", builtin_lt);
     lenv_add_builtin(e, ">=", builtin_egt);
     lenv_add_builtin(e, "<=", builtin_elt);
+    lenv_add_builtin(e, "==", builtin_eq);
+    lenv_add_builtin(e, "!=", builtin_neq);
 
     lenv_add_builtin(e, "if", builtin_if);
 
+    lenv_add_builtin(e, "and", builtin_and);
+    lenv_add_builtin(e, "or", builtin_or);
+    lenv_add_builtin(e, "not", builtin_not);
+
     lenv_add_builtin(e, "load", builtin_load);
+
+    /* builtin_symbol */
+    lenv_put(e, lval_sym("TRUE"), lval_bool(1));
+    lenv_put(e, lval_sym("FALSE"), lval_bool(0));
 }

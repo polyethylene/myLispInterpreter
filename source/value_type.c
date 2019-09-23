@@ -39,10 +39,14 @@ lval *lval_str(char *s) {
     return r;
 }
 
-lval *lval_bool(lbool v) {
+lval *lval_bool(int cond) {
     lval *r = malloc(sizeof(lval));
     r->type = LTYPE_BOOL;
-    r->bval = v;
+    if (cond == 0) {
+        r->bval = LBOOL_FALSE;
+    } else {
+        r->bval = LBOOL_TRUE;
+    }
     return r;
 }
 
@@ -128,6 +132,9 @@ lval *lval_copy(lval *a) {
         case LTYPE_STR:
             r->str = malloc(strlen(a->str) + 1);
             strcpy(r->str, a->str);
+            break;
+        case LTYPE_BOOL:
+            r->bval = a->bval;
             break;
         case LTYPE_SEXPR:
             r->count = a->count;

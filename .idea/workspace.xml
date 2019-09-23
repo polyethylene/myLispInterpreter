@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ba6321e-218d-4fd4-a14a-0218f56fb3db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/standard_library/standard_tools.lspy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.lspy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/builtin.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/builtin.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.h" afterDir="false" />
@@ -25,10 +23,10 @@
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/headers.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/headers.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/read.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/read.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/value_type.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/value_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/source/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +41,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/eval.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="80">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/value_type.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2920">
+              <caret line="146" column="39" lean-forward="true" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -52,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/headers.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="70">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#51#69#0" expanded="true" />
               </folding>
@@ -61,39 +68,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/mpc.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="1357" selection-start-line="1357" selection-end-line="1357" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/builtin.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+            <state relative-caret-position="432">
+              <caret line="365" column="43" lean-forward="true" selection-start-line="365" selection-start-column="43" selection-end-line="365" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.lspy">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/source/value_type.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/read.h">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -101,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/builtin.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="-270">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -110,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="406">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="e#317#377#0" expanded="true" />
               </folding>
@@ -122,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/read.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="186">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -135,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lval_add</find>
       <find>qexpr</find>
       <find>lval_qexpr</find>
       <find>delete</find>
@@ -164,6 +160,8 @@
       <find>lval_str</find>
       <find>builtin_load</find>
       <find>lval_read</find>
+      <find>lval_num</find>
+      <find>return</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,33 +176,32 @@
         <option value="$PROJECT_DIR$/source/read.h" />
         <option value="$PROJECT_DIR$/eval.h" />
         <option value="$PROJECT_DIR$/source/eval.h" />
-        <option value="$PROJECT_DIR$/source/value_type.h" />
         <option value="$PROJECT_DIR$/source/eval.c" />
-        <option value="$PROJECT_DIR$/source/builtin.h" />
-        <option value="$PROJECT_DIR$/source/headers.h" />
-        <option value="$PROJECT_DIR$/source/main.c" />
         <option value="$PROJECT_DIR$/source/test.lspy" />
-        <option value="$PROJECT_DIR$/source/value_type.c" />
-        <option value="$PROJECT_DIR$/source/read.c" />
-        <option value="$PROJECT_DIR$/source/builtin.c" />
         <option value="$PROJECT_DIR$/test.lspy" />
         <option value="$PROJECT_DIR$/standard_library/curry_op.lspy" />
         <option value="$PROJECT_DIR$/standard_library/standard_tools.lspy" />
+        <option value="$PROJECT_DIR$/source/value_type.h" />
+        <option value="$PROJECT_DIR$/source/builtin.h" />
+        <option value="$PROJECT_DIR$/source/headers.h" />
+        <option value="$PROJECT_DIR$/source/read.c" />
+        <option value="$PROJECT_DIR$/source/main.c" />
+        <option value="$PROJECT_DIR$/source/builtin.c" />
+        <option value="$PROJECT_DIR$/source/value_type.c" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="952" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,11 +218,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programs/C++/CLion/myLispCompiler_1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -278,27 +276,29 @@
       <workItem from="1569126002136" duration="4610000" />
       <workItem from="1569137045948" duration="3838000" />
       <workItem from="1569140959021" duration="5017000" />
+      <workItem from="1569222304931" duration="2112000" />
+      <workItem from="1569243473374" duration="4624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54177000" />
+    <option name="totallyTimeSpent" value="60913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12473348" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.4989339" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.28416485" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.31995663" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.318872" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49946696" weight="0.28524947" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.28416485" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.40563992" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.49946696" weight="0.329718" />
@@ -336,14 +336,49 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/source/read.c</url>
+          <line>53</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/source/value_type.c</url>
+          <line>221</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="v" />
+        <watch expression="env-&gt;vals+21" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>env-&gt;vals+21</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>env-&gt;syms+21</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>env+21</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>env+20</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>filename+8</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -359,13 +394,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/read.cpp" />
     <entry file="file://$PROJECT_DIR$/read.c" />
-    <entry file="file://$PROJECT_DIR$/source/mpc.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="299" column="19" selection-start-line="299" selection-start-column="13" selection-end-line="299" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/TDM-GCC/x86_64-w64-mingw32/include/string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -380,37 +408,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="131" column="25" lean-forward="true" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/tools.lspy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/eval.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/a" />
+    <entry file="file://$PROJECT_DIR$/source/tools.lspy" />
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -418,34 +417,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/standard_library/curry_op.lspy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/standard_library/curry_op.lspy" />
+    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/headers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#51#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/test.lspy">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/source/mpc.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="1357" selection-start-line="1357" selection-end-line="1357" />
+        <state relative-caret-position="-397">
+          <caret line="2031" column="14" selection-start-line="2031" selection-start-column="14" selection-end-line="2031" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/mpc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1239">
+          <caret line="299" column="19" selection-start-line="299" selection-start-column="13" selection-end-line="299" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/value_type.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/builtin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/read.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/read.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="186">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -454,38 +471,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="406">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#317#377#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/builtin.h">
+    <entry file="file://$PROJECT_DIR$/source/eval.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/read.h">
+    <entry file="file://$PROJECT_DIR$/source/value_type.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        <state relative-caret-position="2920">
+          <caret line="146" column="39" lean-forward="true" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.lspy">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/source/headers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#51#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/builtin.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+        <state relative-caret-position="432">
+          <caret line="365" column="43" lean-forward="true" selection-start-line="365" selection-start-column="43" selection-end-line="365" selection-end-column="43" />
         </state>
       </provider>
     </entry>

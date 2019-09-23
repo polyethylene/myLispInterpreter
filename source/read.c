@@ -32,7 +32,6 @@ lval *lval_read_single(mpc_ast_t *v) {
     if (strstr(v->tag, "number")) { return lval_read_number(v); }
     if (strstr(v->tag, "symbol")) { return lval_sym(v->contents); }
     if (strstr(v->tag, "string")) { return lval_read_string(v); }
-
     lval *x = NULL;
     if (strstr(v->tag, "qexpr")) {
         x = lval_qexpr();

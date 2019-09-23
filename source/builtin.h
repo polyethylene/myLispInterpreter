@@ -45,9 +45,23 @@ lval *builtin_elt(lenv *, lval *);
 
 lval *builtin_cmp(lval *, char *);
 
+int test_eq(lval *, lval *);
+
+lval *builtin_eq(lenv *, lval *);
+
+lval *builtin_neq(lenv *, lval *);
+
 /* builtin conditional operation */
 
 lval *builtin_if(lenv *, lval *);
+
+/* builtin bool operation */
+
+lval *builtin_and(lenv *, lval *);
+
+lval *builtin_or(lenv *, lval *);
+
+lval *builtin_not(lenv *, lval *);
 
 /* builtin file read operation */
 

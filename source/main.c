@@ -21,12 +21,12 @@ void add_history(char *unused) {}
 /* initialization of parser type */
 
 char *grammar_string = "number : /-?[0-9]+/ ;"
-                       "symbol :/[a-zA-Z0-9_+\\-*\\/\\\\=<>!&]+/;"
-                       "string  : /\"(\\\\.|[^\"])*\"/ ;"
+                       "symbol : /[a-zA-Z0-9_+\\-*\\/\\\\=<>!&]+/ ;"
+                       "string : /\"(\\\\.|[^\"])*\"/ ;"
                        "sexpr  : '(' <expr>* ')' ;"
                        "qexpr  : ''' <expr> ;"
                        "expr   : <number> | <symbol> | <sexpr> | <qexpr> | <string> ;"
-                       "lisp  : /^/ <expr>* /$/ ;";
+                       "lisp   : /^/ <expr>* /$/ ;";
 
 void parser_initialize() {
     Number = mpc_new("number");
@@ -78,6 +78,6 @@ int main() {
         free(input);
     }
 
-    mpc_cleanup(6, Number, Symbol, String, SExpr, QExpr, Lisp);
+    mpc_cleanup(7, Number, Symbol, String, SExpr, QExpr, Expr, Lisp);
     return 0;
 }

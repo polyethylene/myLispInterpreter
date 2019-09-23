@@ -88,7 +88,7 @@ lval *lval_err(char *, ...);
 
 lval *lval_str(char *);
 
-lval *lval_bool(lbool);
+lval *lval_bool(int);
 
 lval *lval_sexpr();
 

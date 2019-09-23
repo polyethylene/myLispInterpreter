@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/polyethylene/Github/myLispInterpreter/source/builtin.c
-builtin.h
-C:/polyethylene/Github/myLispInterpreter/source/builtin.h
-
 C:/polyethylene/Github/myLispInterpreter/source/builtin.h
 headers.h
 C:/polyethylene/Github/myLispInterpreter/source/headers.h
@@ -55,6 +51,10 @@ ctype.h
 C:/polyethylene/Github/myLispInterpreter/source/read.h
 mpc.h
 C:/polyethylene/Github/myLispInterpreter/source/mpc.h
+
+C:/polyethylene/Github/myLispInterpreter/source/value_type.c
+headers.h
+C:/polyethylene/Github/myLispInterpreter/source/headers.h
 
 C:/polyethylene/Github/myLispInterpreter/source/value_type.h
 

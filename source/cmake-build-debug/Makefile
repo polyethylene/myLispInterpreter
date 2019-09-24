@@ -176,6 +176,33 @@ eval.c.s:
 	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/eval.c.s
 .PHONY : eval.c.s
 
+hash_table.obj: hash_table.c.obj
+
+.PHONY : hash_table.obj
+
+# target to build an object file
+hash_table.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/hash_table.c.obj
+.PHONY : hash_table.c.obj
+
+hash_table.i: hash_table.c.i
+
+.PHONY : hash_table.i
+
+# target to preprocess a source file
+hash_table.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/hash_table.c.i
+.PHONY : hash_table.c.i
+
+hash_table.s: hash_table.c.s
+
+.PHONY : hash_table.s
+
+# target to generate assembly for a file
+hash_table.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/hash_table.c.s
+.PHONY : hash_table.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -299,6 +326,9 @@ help:
 	@echo ... eval.obj
 	@echo ... eval.i
 	@echo ... eval.s
+	@echo ... hash_table.obj
+	@echo ... hash_table.i
+	@echo ... hash_table.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

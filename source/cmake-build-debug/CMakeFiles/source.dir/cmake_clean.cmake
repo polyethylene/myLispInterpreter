@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/source.dir/value_type.c.obj"
   "CMakeFiles/source.dir/eval.c.obj"
   "CMakeFiles/source.dir/builtin.c.obj"
+  "CMakeFiles/source.dir/hash_table.c.obj"
   "source.pdb"
   "source.exe"
   "source.exe.manifest"

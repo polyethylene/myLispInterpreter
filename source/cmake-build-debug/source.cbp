@@ -88,6 +88,12 @@
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/eval.h">
 			<Option target="source"/>
 		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/hash_table.c">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/hash_table.h">
+			<Option target="source"/>
+		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/headers.h">
 			<Option target="source"/>
 		</Unit>

@@ -126,26 +126,6 @@ void lenv_put(lenv *, lval *, lval *);
 
 lenv *lenv_copy(lenv *);
 
-/* operation of link list */
-
-lval_link_list *new_link_list();
-
-void del_link_list(lval_link_list *);
-
-void link_list_insert(lval_link_list *, int, lval *);
-
-void link_list_delete(lval_link_list *, int);
-
-void link_list_push_front(lval_link_list *, lval *);
-
-void link_list_pop_front(lval_link_list *, lval *);
-
-void link_list_push_back(lval_link_list *, lval *);
-
-void link_list_pop_back(lval_link_list *, lval *);
-
-lval *link_list_get(lval_link_list *, int);
-
 
 /* addition function */
 char *ltype_name(ltype);

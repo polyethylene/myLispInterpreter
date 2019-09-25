@@ -1,7 +1,7 @@
 #ifndef SOURCE_HASH_TABLE_H
 #define SOURCE_HASH_TABLE_H
 
-#define TABLE_SIZE 1000003
+#define TABLE_SIZE 4
 
 typedef void free_func(void *);
 
@@ -10,6 +10,7 @@ typedef struct hash_table hash_table;
 
 struct hash_elem {
     hash_elem *next;
+    hash_elem *prev;
     char *key;
     void *elem;
 
@@ -39,5 +40,7 @@ int hash_table_find(hash_table *, char *);
 void *hash_table_get(hash_table *, char *);
 
 void hash_table_free(hash_table *);
+
+int count_crush(hash_table *);
 
 #endif //SOURCE_HASH_TABLE_H

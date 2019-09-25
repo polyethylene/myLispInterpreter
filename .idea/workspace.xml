@@ -12,20 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ba6321e-218d-4fd4-a14a-0218f56fb3db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/hash_table.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/hash_table.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/source.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/source.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/value_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/hash_table.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/hash_table.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/hash_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/hash_table.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/source/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/hash_table.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+            <state relative-caret-position="1592">
+              <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -61,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/hash_table.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="752">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -70,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/headers.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
+            <state relative-caret-position="540">
               <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
               <folding>
                 <element signature="e#51#69#0" expanded="true" />
@@ -83,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/source/value_type.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -206,8 +195,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="856" />
-    <option name="y" value="18" />
+    <option name="x" value="1452" />
+    <option name="y" value="470" />
     <option name="width" value="974" />
     <option name="height" value="1048" />
   </component>
@@ -216,6 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,12 +222,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programs/C(CLion)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -296,19 +285,23 @@
       <workItem from="1569252086806" duration="616000" />
       <workItem from="1569311943206" duration="4485000" />
       <workItem from="1569331634562" duration="2020000" />
-      <workItem from="1569336986332" duration="1386000" />
+      <workItem from="1569336986332" duration="1724000" />
+      <workItem from="1569341765686" duration="55000" />
+      <workItem from="1569416466280" duration="598000" />
+      <workItem from="1569417636533" duration="27000" />
+      <workItem from="1569419941619" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69420000" />
+    <option name="totallyTimeSpent" value="70461000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.13326226" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1395189" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989339" weight="0.329718" />
@@ -471,6 +464,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/headers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding>
+            <element signature="e#51#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/value_type.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/eval.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
@@ -512,34 +522,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/headers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding>
-            <element signature="e#51#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/hash_table.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="752">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/hash_table.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+        <state relative-caret-position="1592">
+          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

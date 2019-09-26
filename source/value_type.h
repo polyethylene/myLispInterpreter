@@ -1,6 +1,10 @@
 #ifndef SOURCE_VALUE_TYPE_H
 #define SOURCE_VALUE_TYPE_H
 
+#include "hash_table.h"
+
+#define USE_HASH_TABLE
+
 typedef enum lbool lbool;
 typedef enum ltype ltype;
 
@@ -59,9 +63,14 @@ struct lval {
 struct lenv {
     lenv *par;
 
+#ifndef USE_HASH_TABLE
     int count;
     char **syms;
     lval **vals;
+#endif
+
+    hash_table* ht;
+
 };
 
 /* definition of lisp value data structure */

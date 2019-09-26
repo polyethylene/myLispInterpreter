@@ -210,27 +210,39 @@ char *ltype_name(ltype type) {
 
 lenv *lenv_new() {
     lenv *r = malloc(sizeof(lenv));
+
+#ifndef USE_HASH_TABLE
     r->count = 0;
     r->syms = NULL;
     r->vals = NULL;
+#else
+    r->ht = hash_table_new(37);
     r->par = NULL;
+#endif
 }
 
 lval *lenv_get(lenv *env, lval *v) {
+#ifndef USE_HASH_TABLE
     for (int i = 0; i < env->count; i++) {
         if (strcmp(v->sym, env->syms[i]) == 0) {
             return lval_copy(env->vals[i]);
         }
+    }
+#else
+    if (hash_table_find(env->ht, v->sym)) {
+        return (lval *) hash_table_get(env->ht, v->sym);
     }
     if (env->par) {
         lenv_get(env->par, v);
     } else {
         return lval_err("Unbound symbol %s", v->sym);
     }
+#endif
 }
 
 lenv *lenv_copy(lenv *e) {
     lenv *r = lenv_new();
+#ifndef USE_HASH_TABLE
     r->count = e->count;
     r->vals = malloc(sizeof(lval *) * e->count);
     r->syms = malloc(sizeof(char *) * e->count);
@@ -241,12 +253,16 @@ lenv *lenv_copy(lenv *e) {
         r->syms[i] = malloc(strlen(e->syms[i]) + 1);
         strcpy(r->syms[i], e->syms[i]);
     }
+#else
+    r->ht = hash_table_copy(e->ht);
     return r;
+#endif
 }
 
 /* put new pairs into environment */
 
 void lenv_put(lenv *env, lval *s, lval *v) {
+#ifndef USE_HASH_TABLE
     for (int i = 0; i < env->count; i++) {
         /* if there is one same symbol in the environment, redefine it */
         if (strcmp(env->syms[i], s->sym) == 0) {
@@ -267,4 +283,20 @@ void lenv_put(lenv *env, lval *s, lval *v) {
 
     /* copy new value into environment (has allocated in lval_copy) */
     env->vals[env->count - 1] = lval_copy(v);
+#else
+    hash_table_add(env->ht, s->sym, v, lval_del, lval_copy);
+#endif
+}
+
+void lenv_del(lenv *env) {
+#ifndef USE_HASH_TABLE
+    for(int i = 0;i<count;i++){
+        free(env->sym[i]);
+        lval_free(env->val[i]);
+    }
+    free(sym);
+    lval_free(env->val);
+#else
+    hash_table_free(env->ht);
+#endif
 }

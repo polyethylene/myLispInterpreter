@@ -13,8 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2ba6321e-218d-4fd4-a14a-0218f56fb3db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/builtin.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/hash_table.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/hash_table.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/hash_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/hash_table.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/value_type.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/value_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/source/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,17 +33,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/value_type.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="153" column="29" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="29" />
+            <state relative-caret-position="-130">
+              <caret line="265" column="4" lean-forward="true" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
+              <folding>
+                <element signature="e#4926#5073#0" expanded="true" />
+                <element signature="e#5957#6712#0" expanded="true" />
+                <element signature="e#6844#6976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/eval.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/read.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#317#377#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/hash_table.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1592">
-              <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+            <state relative-caret-position="842">
+              <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -50,20 +92,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/hash_table.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="180">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/headers.h">
+        <entry file="file://$PROJECT_DIR$/source/builtin.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-              <folding>
-                <element signature="e#51#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-10">
+              <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -71,58 +110,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/value_type.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/eval.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/read.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/builtin.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="484">
+              <caret line="131" column="20" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
               <folding>
-                <element signature="e#317#377#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/read.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1420">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#1293#1337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,9 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delete</find>
-      <find>lval_err</find>
-      <find>formals</find>
       <find>e</find>
       <find>cell</find>
       <find>lval_get</find>
@@ -143,10 +131,8 @@
       <find>lval_fun</find>
       <find>env</find>
       <find>lenv_copy</find>
-      <find>lenv_new</find>
       <find>builtin_lambda</find>
       <find>`</find>
-      <find>lenv_get</find>
       <find>lval</find>
       <find>lval_lambda</find>
       <find>int</find>
@@ -159,9 +145,14 @@
       <find>lval_read</find>
       <find>lval_num</find>
       <find>return</find>
-      <find>lval_del</find>
-      <find>lenv</find>
       <find>bulitnin</find>
+      <find>hash_table_add</find>
+      <find>lval_del</find>
+      <find>lenv_del</find>
+      <find>lenv_new</find>
+      <find>hash_elem_new</find>
+      <find>lenv</find>
+      <find>lenv_get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,13 +173,13 @@
         <option value="$PROJECT_DIR$/standard_library/curry_op.lspy" />
         <option value="$PROJECT_DIR$/standard_library/standard_tools.lspy" />
         <option value="$PROJECT_DIR$/source/builtin.h" />
-        <option value="$PROJECT_DIR$/source/headers.h" />
         <option value="$PROJECT_DIR$/source/read.c" />
         <option value="$PROJECT_DIR$/source/main.c" />
-        <option value="$PROJECT_DIR$/source/builtin.c" />
-        <option value="$PROJECT_DIR$/source/value_type.c" />
+        <option value="$PROJECT_DIR$/source/headers.h" />
         <option value="$PROJECT_DIR$/source/value_type.h" />
+        <option value="$PROJECT_DIR$/source/builtin.c" />
         <option value="$PROJECT_DIR$/source/hash_table.h" />
+        <option value="$PROJECT_DIR$/source/value_type.c" />
         <option value="$PROJECT_DIR$/source/hash_table.c" />
       </list>
     </option>
@@ -290,28 +281,31 @@
       <workItem from="1569416466280" duration="598000" />
       <workItem from="1569417636533" duration="27000" />
       <workItem from="1569419941619" duration="23000" />
+      <workItem from="1569474716827" duration="3414000" />
+      <workItem from="1569504466401" duration="596000" />
+      <workItem from="1569506661081" duration="909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70461000" />
+    <option name="totallyTimeSpent" value="75380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1395189" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14570446" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.28416485" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.318872" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.3182898" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.28416485" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.40563992" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" visible="true" weight="0.283848" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.4049881" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -351,13 +345,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/source/read.c</url>
-          <line>53</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/source/value_type.c</url>
+          <line>223</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/source/value_type.c</url>
-          <line>221</line>
+          <url>file://$PROJECT_DIR$/source/eval.c</url>
+          <line>4</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -365,12 +359,17 @@
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="v" />
-        <watch expression="env-&gt;vals+21" language="ObjectiveC" />
+        <watch expression="(lval*)v" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>(lval*)v</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>env-&gt;vals+21</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -430,9 +429,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/standard_library/curry_op.lspy" />
-    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.lspy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -450,44 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/builtin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="74" column="12" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="153" column="29" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/headers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding>
-            <element signature="e#51#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/eval.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/read.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -497,44 +455,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/builtin.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="752">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/main.c">
+    <entry file="file://$PROJECT_DIR$/source/headers.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="80">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/value_type.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="131" column="20" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
           <folding>
-            <element signature="e#317#377#0" expanded="true" />
+            <element signature="e#1293#1337#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/read.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="215">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/hash_table.h">
+    <entry file="file://$PROJECT_DIR$/source/eval.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="-160">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/value_type.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="265" column="4" lean-forward="true" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
+          <folding>
+            <element signature="e#4926#5073#0" expanded="true" />
+            <element signature="e#5957#6712#0" expanded="true" />
+            <element signature="e#6844#6976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/hash_table.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/builtin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/hash_table.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1592">
-          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        <state relative-caret-position="842">
+          <caret line="231" column="26" lean-forward="true" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#317#377#0" expanded="true" />
           </folding>
         </state>
       </provider>

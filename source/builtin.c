@@ -319,8 +319,8 @@ lval *builtin_load(lenv *env, lval *v) {
             int num = 0;
             cur = lval_read(t.output, &num);
             mpc_ast_delete(t.output);
-            for (int i = 0; i < num; i++) {
-                lval_eval(env, cur[i]);
+            for (int j = 0; j < num; j++) {
+                lval_eval(env, cur[j]);
             }
         } else {
             char *err_msg = mpc_err_string(t.error);

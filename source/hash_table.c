@@ -64,14 +64,14 @@ void hash_elem_insert(hash_elem *d, hash_elem *t) {
     }
 }
 
-hash_table *hash_table_new() {
+hash_table *hash_table_new(unsigned int c) {
     hash_table *r = malloc(sizeof(hash_table));
-    r->keys = malloc(TABLE_SIZE * sizeof(hash_elem *));
-    for (int i = 0; i < TABLE_SIZE; i++) {
+    r->keys = malloc(c * sizeof(hash_elem *));
+    for (int i = 0; i < c; i++) {
         r->keys[i] = NULL;
     }
     r->size = 0;
-    r->capacity = TABLE_SIZE;
+    r->capacity = c;
     return r;
 }
 
@@ -93,7 +93,7 @@ void hash_table_extent(hash_table *ht) {
                 if (time33(tmp->key) % ht->capacity != i) {
                     hash_elem *dtmp = tmp;
                     ht->size--;
-                    hash_table_add(ht, tmp->key, tmp->elem, tmp->elem_free);
+                    hash_table_add(ht, tmp->key, tmp->elem, tmp->elem_free, tmp->elem_copy);
                     tmp = hash_elem_delete(dtmp);
                     free(dtmp->key);
                     free(dtmp);
@@ -106,7 +106,7 @@ void hash_table_extent(hash_table *ht) {
             tmp = ht->keys[i];
             if (time33(tmp->key) % ht->capacity != i) {
                 ht->size--;
-                hash_table_add(ht, tmp->key, tmp->elem, tmp->elem_free);
+                hash_table_add(ht, tmp->key, tmp->elem, tmp->elem_free, tmp->elem_copy);
                 ht->keys[i] = tmp->next;
                 if (tmp->next) {
                     tmp->next->prev = NULL;
@@ -119,16 +119,15 @@ void hash_table_extent(hash_table *ht) {
 }
 
 
-/* suppose v is a copy element and only is used in hash_table */
-
-hash_elem *hash_elem_new(char *k, void *v, free_func *f) {
+hash_elem *hash_elem_new(char *k, void *v, free_func *ff, copy_func *cf) {
     hash_elem *r = malloc(sizeof(hash_elem));
     r->key = malloc(strlen(k) + 1);
     strcpy(r->key, k);
-    r->elem = v;
+    r->elem = cf(v);
     r->next = NULL;
     r->prev = NULL;
-    r->elem_free = f;
+    r->elem_free = ff;
+    r->elem_copy = cf;
     return r;
 }
 
@@ -170,29 +169,29 @@ void *hash_table_get(hash_table *ht, char *k) {
     }
 }
 
-/* suggest v is a copy value */
-void hash_table_add(hash_table *ht, char *k, void *v, free_func *f) {
+void hash_table_add(hash_table *ht, char *k, void *v, free_func *ff, copy_func *cf) {
     ht->size++;
     if (ht->size >= ht->capacity * 0.5) {
         hash_table_extent(ht);
     }
     unsigned key = time33(k) % (ht->capacity);
     if (!ht->keys[key]) {
-        ht->keys[key] = hash_elem_new(k, v, f);
+        ht->keys[key] = hash_elem_new(k, v, ff, cf);
         return;
     } else {
         hash_elem *tmp = ht->keys[key];
         while (tmp) {
             if (strcmp(k, tmp->key) == 0) {
                 tmp->elem_free(tmp->elem);
-                tmp->elem = v;
-                tmp->elem_free = f;
+                tmp->elem = cf(v);
+                tmp->elem_free = ff;
+                tmp->elem_copy = cf;
                 ht->size--;
                 return;
             }
             tmp = tmp->next;
         }
-        hash_elem *h = hash_elem_new(k, v, f);
+        hash_elem *h = hash_elem_new(k, v, ff, cf);
         hash_elem_insert(ht->keys[key], h);
     }
 }
@@ -254,3 +253,30 @@ int count_crush(hash_table *ht) {
     return ret;
 }
 
+hash_elem *hash_elem_copy(hash_elem *h) {
+    hash_elem *r = hash_elem_new(h->key, NULL, h->elem_free, h->elem_copy);
+    if (h->elem_copy) {
+        r->elem = h->elem_copy(h->elem);
+    } else {
+        r->elem = h->elem;
+    }
+    return r;
+}
+
+hash_table *hash_table_copy(hash_table *ht) {
+    hash_table *r = hash_table_new(ht->capacity);
+    r->size = ht->size;
+    r->capacity = ht->capacity;
+    for (int i = 0; i < ht->capacity; i++) {
+        if (ht->keys[i]) {
+            r->keys[i] = hash_elem_copy(ht->keys[i]);
+            hash_elem *tmp = ht->keys[i]->next;
+            hash_elem *tar = r->keys[i];
+            while (tmp) {
+                hash_elem_insert(tar, hash_elem_copy(tmp->next));
+                tmp = tmp->next;
+            }
+        }
+    }
+    return r;
+}

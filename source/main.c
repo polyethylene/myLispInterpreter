@@ -77,7 +77,7 @@ int main() {
         }
         free(input);
     }
-
+    lenv_del(env);
     mpc_cleanup(7, Number, Symbol, String, SExpr, QExpr, Expr, Lisp);
     return 0;
 }

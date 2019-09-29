@@ -125,7 +125,7 @@ lval *lval_take(lval *, int);
 lval *lval_join(lval *, lval *);
 
 
-/* operation of enviroment */
+/* operation of environment */
 
 lval *lenv_get(lenv *, lval *);
 

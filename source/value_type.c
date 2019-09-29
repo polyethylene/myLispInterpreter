@@ -184,6 +184,14 @@ lval *lval_take(lval *v, int i) {
     return r;
 }
 
+lval* lval_join(lval* lhs,lval* rhs){
+    while(rhs->count){
+        lhs = lval_add(lhs,lval_pop(rhs,0));
+    }
+    lval_del(rhs);
+    return lhs;
+}
+
 /* return the name of type (for error format print) */
 
 char *ltype_name(ltype type) {

@@ -78,6 +78,18 @@ lval *builtin_tail(lenv *env, lval *v) {
     return r;
 }
 
+lval *builtin_join(lenv *env, lval *v) {
+    for (int i = 0; i < v->count; i++) {
+        LASSERT_TYPE("join", v, i, LTYPE_QEXPR);
+    }
+    lval *r = lval_pop(v, 0);
+    while (v->count) {
+        r->tar = lval_join(r->tar, lval_pop(v, 0)->tar);
+    }
+    lval_del(v);
+    return r;
+}
+
 lval *builtin_lambda(lenv *env, lval *v) {
     LASSERT_NUM("lambda", v, 2);
     LASSERT_TYPE("lambda", v, 0, LTYPE_QEXPR);
@@ -355,6 +367,7 @@ void lenv_add_builtins(lenv *e) {
     lenv_add_builtin(e, "list", builtin_list);
     lenv_add_builtin(e, "head", builtin_head);
     lenv_add_builtin(e, "tail", builtin_tail);
+    lenv_add_builtin(e, "join", builtin_join);
 
     lenv_add_builtin(e, "eval", builtin_eval);
     lenv_add_builtin(e, "define", builtin_def);

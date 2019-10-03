@@ -230,6 +230,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/main.c.s
 .PHONY : main.c.s
 
+memory_pool.obj: memory_pool.c.obj
+
+.PHONY : memory_pool.obj
+
+# target to build an object file
+memory_pool.c.obj:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/memory_pool.c.obj
+.PHONY : memory_pool.c.obj
+
+memory_pool.i: memory_pool.c.i
+
+.PHONY : memory_pool.i
+
+# target to preprocess a source file
+memory_pool.c.i:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/memory_pool.c.i
+.PHONY : memory_pool.c.i
+
+memory_pool.s: memory_pool.c.s
+
+.PHONY : memory_pool.s
+
+# target to generate assembly for a file
+memory_pool.c.s:
+	$(MAKE) -f CMakeFiles\source.dir\build.make CMakeFiles/source.dir/memory_pool.c.s
+.PHONY : memory_pool.c.s
+
 mpc.obj: mpc.c.obj
 
 .PHONY : mpc.obj
@@ -332,6 +359,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... memory_pool.obj
+	@echo ... memory_pool.i
+	@echo ... memory_pool.s
 	@echo ... mpc.obj
 	@echo ... mpc.i
 	@echo ... mpc.s

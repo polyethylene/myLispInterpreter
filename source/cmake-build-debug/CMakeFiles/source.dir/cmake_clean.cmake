@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/source.dir/eval.c.obj"
   "CMakeFiles/source.dir/builtin.c.obj"
   "CMakeFiles/source.dir/hash_table.c.obj"
+  "CMakeFiles/source.dir/memory_pool.c.obj"
   "source.pdb"
   "source.exe"
   "source.exe.manifest"

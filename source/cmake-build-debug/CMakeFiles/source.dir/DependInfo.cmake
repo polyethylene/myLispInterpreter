@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/polyethylene/Github/myLispInterpreter/source/eval.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/eval.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/hash_table.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/hash_table.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/main.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj"
+  "C:/polyethylene/Github/myLispInterpreter/source/memory_pool.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/memory_pool.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/mpc.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/mpc.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/read.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/read.c.obj"
   "C:/polyethylene/Github/myLispInterpreter/source/value_type.c" "C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj"

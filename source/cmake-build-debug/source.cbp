@@ -100,6 +100,12 @@
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/main.c">
 			<Option target="source"/>
 		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/memory_pool.c">
+			<Option target="source"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/memory_pool.h">
+			<Option target="source"/>
+		</Unit>
 		<Unit filename="C:/polyethylene/Github/myLispInterpreter/source/mpc.c">
 			<Option target="source"/>
 		</Unit>

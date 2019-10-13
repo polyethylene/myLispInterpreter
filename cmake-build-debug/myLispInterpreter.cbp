@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="myLispInterpreter"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\lib\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src">
+				<Option output="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/src.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 src"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src/fast">
+				<Option output="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/src.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 src/fast"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib">
+				<Option output="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/liblib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/lib"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 lib"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib/fast">
+				<Option output="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/liblib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/cmake-build-debug"/>
+					<Add directory="C:/polyethylene/Github/myLispInterpreter/lib"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/TDM-GCC/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 lib/fast"/>
+					<CompileFile command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/TDM-GCC/bin/mingw32-make.exe -f &quot;C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/hash_table.c">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/hash_table.h">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/memory_pool.c">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/memory_pool.h">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/mpc.c">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/mpc.h">
+			<Option target="lib"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/builtin.c">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/builtin.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/eval.c">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/eval.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/main.c">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/read.c">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/read.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/value_type.c">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/value_type.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="C:/polyethylene/Github/myLispInterpreter/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

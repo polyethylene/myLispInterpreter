@@ -1,0 +1,8 @@
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/CMakeFiles/src.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/CMakeFiles/lib.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/CMakeFiles/edit_cache.dir
+C:/polyethylene/Github/myLispInterpreter/cmake-build-debug/lib/CMakeFiles/rebuild_cache.dir

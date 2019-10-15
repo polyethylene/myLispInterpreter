@@ -1,0 +1,2 @@
+C:\PROGRA~2\TDM-GCC\bin\ar.exe qc liblib.a  CMakeFiles/lib.dir/hash_table.c.obj CMakeFiles/lib.dir/memory_pool.c.obj CMakeFiles/lib.dir/mpc.c.obj
+C:\PROGRA~2\TDM-GCC\bin\ranlib.exe liblib.a

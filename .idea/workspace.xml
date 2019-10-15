@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="source" targetName="source" />
+      <config projectName="myLispInterpreter" targetName="lib" />
+      <config projectName="myLispInterpreter" targetName="src" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,18 +14,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2ba6321e-218d-4fd4-a14a-0218f56fb3db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/builtin.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/builtin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/builtin.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/builtin.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/CMakeFiles/source.dir/value_type.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" beforeDir="false" afterPath="$PROJECT_DIR$/source/cmake-build-debug/source.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/value_type.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/value_type.h" beforeDir="false" afterPath="$PROJECT_DIR$/source/value_type.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/eval.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/eval.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/src.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/src.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/memory_pool.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/memory_pool.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/memory_pool.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/memory_pool.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/value_type.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/value_type.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/source/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,110 +33,47 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/value_type.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="188" column="39" selection-start-line="188" selection-start-column="39" selection-end-line="188" selection-end-column="39" />
-              <folding>
-                <element signature="e#4926#5073#0" expanded="true" />
-                <element signature="e#5957#6712#0" expanded="true" />
-                <element signature="e#6844#6976#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/eval.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/read.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-              <folding>
-                <element signature="e#317#377#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/hash_table.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="231" column="26" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/hash_table.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/builtin.c">
+        <entry file="file://$PROJECT_DIR$/lib/memory_pool.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="88" column="16" lean-forward="true" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/value_type.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="592">
+              <caret line="172" column="1" lean-forward="true" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
               <folding>
-                <element signature="e#1293#1337#0" expanded="true" />
+                <element signature="e#40#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/headers.h">
+        <entry file="file://$PROJECT_DIR$/lib/memory_pool.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="960">
+              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/value_type.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="108" column="3" selection-start-line="108" selection-start-column="3" selection-end-line="108" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cell</find>
-      <find>lval_get</find>
       <find>print</find>
       <find>lenv_put</find>
       <find>lval_fun</find>
@@ -166,6 +102,8 @@
       <find>lenv</find>
       <find>lenv_get</find>
       <find>free</find>
+      <find>def</find>
+      <find>hash</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,38 +132,48 @@
         <option value="$PROJECT_DIR$/source/main.c" />
         <option value="$PROJECT_DIR$/source/value_type.c" />
         <option value="$PROJECT_DIR$/source/builtin.c" />
+        <option value="$PROJECT_DIR$/source/memory_pool.h" />
+        <option value="$PROJECT_DIR$/source/memory_pool.c" />
+        <option value="$PROJECT_DIR$/source/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/lib/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/builtin.c" />
+        <option value="$PROJECT_DIR$/src/eval.c" />
+        <option value="$PROJECT_DIR$/src/value_type.c" />
+        <option value="$PROJECT_DIR$/lib/memory_pool.c" />
+        <option value="$PROJECT_DIR$/lib/memory_pool.h" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1490" />
+    <option name="width" value="1522" />
+    <option name="height" value="1932" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myLispInterpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="myLispInterpreter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myLispInterpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="myLispInterpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,12 +185,14 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\polyethylene\Github\myLispInterpreter\source" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\polyethylene\Github\myLispInterpreter\lib" />
+      <recent name="C:\polyethylene\Github\myLispInterpreter\src" />
       <recent name="C:\polyethylene\Github\myLispInterpreter\source" />
       <recent name="C:\polyethylene\Github\myLispInterpreter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\polyethylene\Github\myLispInterpreter\source" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,12 +207,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="source" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="source" TARGET_NAME="source" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="source" RUN_TARGET_NAME="source">
+  <component name="RunManager" selected="Application.src">
+    <configuration name="lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="myLispInterpreter" TARGET_NAME="lib" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="src" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="myLispInterpreter" TARGET_NAME="src" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="myLispInterpreter" RUN_TARGET_NAME="src">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.lib" />
+      <item itemvalue="Application.src" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -299,32 +258,49 @@
       <workItem from="1569506661081" duration="1117000" />
       <workItem from="1569645317122" duration="1232000" />
       <workItem from="1569738576831" duration="1087000" />
+      <workItem from="1570372497908" duration="346000" />
+      <workItem from="1570688372419" duration="32000" />
+      <workItem from="1570962265161" duration="425000" />
+      <workItem from="1570962717570" duration="2001000" />
+      <workItem from="1571029012426" duration="1564000" />
+      <workItem from="1571053600019" duration="94000" />
+      <workItem from="1571108597998" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77907000" />
+    <option name="totallyTimeSpent" value="88227000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1491409" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.195189" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49840087" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.28416485" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.31710213" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.4989339" weight="0.31591448" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4989339" visible="true" weight="0.28266034" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.4049881" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4989339" weight="0.2570499" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.4989339" weight="0.40455532" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.329718" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -361,11 +337,17 @@
       <configuration name="CMakeRunConfiguration">
         <watch expression="(lval*)v" language="ObjectiveC" />
         <watch expression="v" />
+        <watch expression="x" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>x</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>(lval*)v</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -413,13 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/eval.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/a" />
     <entry file="file://$PROJECT_DIR$/source/tools.lspy" />
     <entry file="file://$PROJECT_DIR$/.gitattributes">
@@ -433,114 +408,152 @@
     <entry file="file://$PROJECT_DIR$/test.lspy">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/mpc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-397">
-          <caret line="2031" column="14" selection-start-line="2031" selection-start-column="14" selection-end-line="2031" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/mpc.h">
+    <entry file="file://$PROJECT_DIR$/lib/mpc.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1239">
           <caret line="299" column="19" selection-start-line="299" selection-start-column="13" selection-end-line="299" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/read.h">
+    <entry file="file://$PROJECT_DIR$/src/read.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/builtin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/headers.h">
+    <entry file="file://$PROJECT_DIR$/src/headers.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/main.c">
+    <entry file="file://$PROJECT_DIR$/src/value_type.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-          <folding>
-            <element signature="e#317#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/read.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/eval.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="188" column="39" selection-start-line="188" selection-start-column="39" selection-end-line="188" selection-end-column="39" />
-          <folding>
-            <element signature="e#4926#5073#0" expanded="true" />
-            <element signature="e#5957#6712#0" expanded="true" />
-            <element signature="e#6844#6976#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/hash_table.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/hash_table.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="231" column="26" selection-start-line="231" selection-start-column="26" selection-end-line="231" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/value_type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="160">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
             <element signature="e#1293#1337#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/builtin.c">
+    <entry file="file://$PROJECT_DIR$/lib/hash_table.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="88" column="16" lean-forward="true" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+        <state relative-caret-position="656">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mpc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="2031" column="14" selection-start-line="2031" selection-start-column="14" selection-end-line="2031" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/standard_library/standard_tools.lspy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/builtin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#317#377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/read.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2580">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eval.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/builtin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/eval.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/hash_table.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="126" column="19" lean-forward="true" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/value_type.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="108" column="3" selection-start-line="108" selection-start-column="3" selection-end-line="108" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/memory_pool.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/memory_pool.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="172" column="1" lean-forward="true" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

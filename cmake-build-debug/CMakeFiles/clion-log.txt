@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2018.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files (x86)/TDM-GCC/bin/mingw32-make.exe" "-DCMAKE_C_COMPILER=C:/Program Files (x86)/TDM-GCC/bin/gcc.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files (x86)/TDM-GCC/bin/g++.exe" -G "CodeBlocks - MinGW Makefiles" C:\polyethylene\Github\myLispInterpreter
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/polyethylene/Github/myLispInterpreter/cmake-build-debug

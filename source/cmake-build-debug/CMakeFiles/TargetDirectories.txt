@@ -1,3 +1,0 @@
-C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/source.dir
-C:/polyethylene/Github/myLispInterpreter/source/cmake-build-debug/CMakeFiles/rebuild_cache.dir

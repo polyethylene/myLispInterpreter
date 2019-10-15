@@ -184,9 +184,9 @@ lval *lval_take(lval *v, int i) {
     return r;
 }
 
-lval* lval_join(lval* lhs,lval* rhs){
-    while(rhs->count){
-        lhs = lval_add(lhs,lval_pop(rhs,0));
+lval *lval_join(lval *lhs, lval *rhs) {
+    while (rhs->count) {
+        lhs = lval_add(lhs, lval_pop(rhs, 0));
     }
     lval_del(rhs);
     return lhs;
@@ -292,7 +292,7 @@ void lenv_put(lenv *env, lval *s, lval *v) {
     /* copy new value into environment (has allocated in lval_copy) */
     env->vals[env->count - 1] = lval_copy(v);
 #else
-    hash_table_add(env->ht, s->sym, v, lval_del, lval_copy);
+    hash_table_add(env->ht, s->sym, v, (free_func *) lval_del, (copy_func *) lval_copy);
 #endif
 }
 
